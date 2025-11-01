@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+.game-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.team {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.team-img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+/* Make red team face right */
+.red-team .team-img {
+    transform: scaleX(1);
+}
+
+/* Make blue team face left */
+.blue-team .team-img {
+    transform: scaleX(-1);
+}
+
+.team-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+.red-team .team-name {
+    color: #ff4444;
+}
+
+.blue-team .team-name {
+    color: #4444ff;
+}
+
+.rope-container {
+    flex-grow: 1;
+    margin: 0 20px;
+    position: relative;
+    height: 20px;
+}
+
+.rope {
+    width: 100%;
+    height: 8px;
+    background-color: #8b4513;
+    position: relative;
+}
+
+.marker {
+    width: 20px;
+    height: 20px;
+    background-color: #333;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: left 0.3s ease;
+}
+
+.game-controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.red-controls, .blue-controls {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.red-controls {
+    background-color: #ffeeee;
+}
+
+.blue-controls {
+    background-color: #eeeeff;
+}
+
+.math-problem {
+    font-size: 24px;
+    margin-bottom: 15px;
+    min-height: 36px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.red-controls button {
+    background-color: #ff4444;
+}
+
+.blue-controls button {
+    background-color: #4444ff;
+}
+
+button:hover {
+    opacity: 0.9;
+}

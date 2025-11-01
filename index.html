@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarik Tambang Matematika</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-area">
+            <div class="team red-team">
+                <img src="red-team.png" alt="Tim Merah" class="team-img">
+                <div class="team-name">Tim Merah</div>
+            </div>
+            <div class="rope-container">
+                <div class="rope">
+                    <div class="marker"></div>
+                </div>
+            </div>
+            <div class="team blue-team">
+                <img src="blue-team.png" alt="Tim Biru" class="team-img">
+                <div class="team-name">Tim Biru</div>
+            </div>
+        </div>
+
+        <div class="game-controls">
+            <div class="red-controls">
+                <div class="math-problem" id="red-problem"></div>
+                <input type="number" id="red-answer" placeholder="Jawaban Tim Merah">
+                <button onclick="checkAnswer('red')">Jawab!</button>
+            </div>
+
+            <div class="blue-controls">
+                <div class="math-problem" id="blue-problem"></div>
+                <input type="number" id="blue-answer" placeholder="Jawaban Tim Biru">
+                <button onclick="checkAnswer('blue')">Jawab!</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
